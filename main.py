@@ -1,20 +1,14 @@
 from flask import Flask, render_template
-from datetime import datetime
 
 app = Flask(__name__)
 
 @app.route("/")
-
 def obed():
-    return render_template("index.html")
+    return render_template("home.html")
 
-@app.route("/blog/")
+@app.route("/about/")
 def blog():
-    return render_template("blog.html")
-
-@app.route("/contacts/")
-def contacts():
-    return render_template("contacts.html")
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run()
